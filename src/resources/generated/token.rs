@@ -515,9 +515,9 @@ pub struct CreditCardSpecs {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub cvc: Option<String>,
     /// Two-digit number representing the card's expiration month.
-    pub exp_month: String,
+    pub exp_month: i8,
     /// Two- or four-digit number representing the card's expiration year.
-    pub exp_year: String,
+    pub exp_year: i16,
     /// Cardholder's full name.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
